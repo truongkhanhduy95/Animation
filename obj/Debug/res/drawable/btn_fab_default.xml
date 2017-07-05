@@ -1,0 +1,1 @@
+<!--drawable-v21/btn_fab_default.xml--><ripple android:color="@color/fab_color_shadow" xmlns:android="http://schemas.android.com/apk/res/android"><item><shape android:shape="oval"><solid android:color="@color/style_color_accent" /></shape></item></ripple>
