@@ -67,6 +67,7 @@
     <Compile Include="MainActivity.anim.cs" />
     <Compile Include="UserProfileActivity.cs" />
     <Compile Include="RevealBackgroundView.cs" />
+    <Compile Include="UserProfileAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

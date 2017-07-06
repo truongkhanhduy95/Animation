@@ -2833,6 +2833,12 @@ namespace Animation
 			// aapt resource value: 0x7f090147
 			public const int AppTheme = 2131296583;
 			
+			// aapt resource value: 0x7f090148
+			public const int AppTheme_TransparentActivity = 2131296584;
+			
+			// aapt resource value: 0x7f090149
+			public const int AppTheme_TransparentActivity_FullScreen = 2131296585;
+			
 			// aapt resource value: 0x7f090084
 			public const int Base_AlertDialog_AppCompat = 2131296388;
 			
@@ -3264,6 +3270,9 @@ namespace Animation
 			
 			// aapt resource value: 0x7f090002
 			public const int CardView_Light = 2131296258;
+			
+			// aapt resource value: 0x7f09014a
+			public const int ContextMenuButton = 2131296586;
 			
 			// aapt resource value: 0x7f090013
 			public const int Platform_AppCompat = 2131296275;

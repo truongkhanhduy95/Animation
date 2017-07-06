@@ -45,18 +45,19 @@ namespace Animation
 
 	}
 
-	public class CustomAnimation : AnimatorListenerAdapter
-	{
-		Action action;
-		public CustomAnimation(Action action)
-		{
-			this.action = action;
-		}
+    public class CustomAnimation : AnimatorListenerAdapter
+    {
+        Action action;
+        public CustomAnimation(Action action)
+        {
+            this.action = action;
+        }
 
-		public override void OnAnimationEnd(Animator animation)
-		{
-			action?.Invoke();
-		}
-	}
+        public override void OnAnimationEnd(Animator animation)
+        {
+            base.OnAnimationEnd(animation);
+            action?.Invoke();
+        }
+    }
 
 }

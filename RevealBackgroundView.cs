@@ -71,10 +71,12 @@ namespace Animation
             ChangeState(AnimationState.FillStarted);
             startLocationX = tapLocations[0];
             startLocationY = tapLocations[1];
-            revealAnimator = ObjectAnimator.OfInt(this, "CurrentRadius", 0, Width + Height);
+            revealAnimator = ObjectAnimator.OfInt(this, "currentRadius", 0, Width + Height);
+            revealAnimator.Update += (sender, e) => Invalidate();
             revealAnimator.SetDuration(FILL_TIME);
             revealAnimator.SetInterpolator(new AccelerateInterpolator());
-            revealAnimator.AddListener(new CustomAnimation(()=> ChangeState(AnimationState.Finished)));
+            revealAnimator.AnimationEnd += (sender, e) => ChangeState(AnimationState.Finished);
+            //revealAnimator.AddListener(new CustomAnimation(()=> ChangeState(AnimationState.Finished)));
             revealAnimator.Start();
         }
 
@@ -84,7 +86,7 @@ namespace Animation
             Invalidate();
         }
 
-        public void SerCurrentRadius(int radius)
+        public void SetCurrentRadius(int radius)
         {
             this.CurrentRadius = radius;
             Invalidate();
@@ -115,7 +117,8 @@ namespace Animation
             }
             else
             {
-                canvas.DrawCircle(startLocationX, startLocationY, CurrentRadius, fillPaint);
+                currentRadius +=150;
+                canvas.DrawCircle(startLocationX, startLocationY, currentRadius, fillPaint);
             }
         }
     }
